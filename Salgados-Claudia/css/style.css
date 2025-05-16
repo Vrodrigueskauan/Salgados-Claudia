@@ -1,0 +1,377 @@
+:root {
+    --marrom: #443627;       /* Títulos e textos principais */
+    --destaque: #D98324;     /* Botões, links hover */
+    --bege: #F1DAA3;
+    --amarelo-claro: #F6F9D5;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background-color: var(--amarelo-claro);
+    color: var(--marrom);
+    line-height: 1.6;
+  }
+  
+  /* Banner com imagem */
+  .banner {
+    background-image: url('https://via.placeholder.com/1600x600?text=Banner+Sabor+da+Esquina');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #443627;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  /* Nav transparente */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.1);
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    color: var(--destaque);
+  }
+  
+  /* Conteúdo do banner */
+  .banner-content {
+    text-align: center;
+    margin-top: auto;
+    padding-bottom: 100px;
+  }
+  
+  .banner-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    color: #443627;
+  }
+  
+  .banner-content p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    background-color: var(--destaque);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #b6661d;
+  }
+  
+  /* Seções */
+  section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  section h2 {
+    color: var(--marrom);
+  }
+  
+  .salgados-section {
+    background-color: var(--bege);
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 300px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+  }
+  
+  .card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0 5px;
+    color: var(--marrom);
+  }
+  
+  .card p {
+    padding: 0 15px 15px;
+    font-size: 0.95rem;
+  }
+  
+  /* Sobre */
+  .sobre-section {
+    background-color: var(--amarelo-claro);
+  }
+  
+  .sobre-section p {
+    max-width: 700px;
+    margin: auto;
+    color: var(--marrom);
+  }
+  
+  /* Contato */
+  .contato-section {
+    background-color: var(--destaque);
+    color: white;
+  }
+  
+  .footer {
+    background-color: var(--marrom);
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9rem;
+  }
+
+  .carrinho-flutuante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--destaque);
+    color: white;
+    padding: 12px 18px;
+    border-radius: 50px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+    z-index: 999;
+  }
+
+
+  .card-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .carrinho-flutuante.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  
+  /* Container geral da página */
+.salgado-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--amarelo-claro);
+    padding: 40px 20px;
+  }
+  
+  /* Card centralizado */
+  .salgado-card {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  /* Imagem do salgado */
+  .salgado-img {
+    flex: 1 1 300px;
+    min-width: 300px;
+  }
+  
+  .salgado-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Conteúdo */
+  .salgado-conteudo {
+    flex: 1 1 400px;
+    padding: 30px;
+  }
+  
+  .salgado-conteudo h1 {
+    color: var(--marrom);
+    margin-bottom: 15px;
+  }
+  
+  .salgado-conteudo ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .salgado-conteudo input[type="number"] {
+    width: 60px;
+    margin: 10px 10px 20px 0;
+    padding: 5px;
+  }
+  
+  .btn {
+    background-color: var(--destaque);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #b5641a;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .salgado-card {
+      flex-direction: column;
+    }
+  }
+  
+  
+  /* Carrossel */
+  .carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    width: fit-content;
+  }
+  
+  .carousel-item {
+    background: white;
+    border-radius: 10px;
+    margin: 0 10px;
+    min-width: 250px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+  }
+  
+  .carousel-btn {
+    background-color: var(--destaque);
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+  }
+  
+  .carousel-btn.left { left: 0; }
+  .carousel-btn.right { right: 0; }
+
+
+  .quantidade-wrapper {
+    margin: 20px 0;
+  }
+  
+  .quantidade-controles {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .quantidade-controles input[type="number"] {
+    width: 70px;
+    padding: 5px;
+  }
+  
+  .quantidade-controles button.incremento {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .quantidade-controles button.incremento:hover {
+    background-color: #ddd;
+  }
+  
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .card-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .banner-content h1 {
+      font-size: 2rem;
+    }
+  
+    .btn {
+      width: 90%;
+      max-width: 250px;
+    }
+  }
+  

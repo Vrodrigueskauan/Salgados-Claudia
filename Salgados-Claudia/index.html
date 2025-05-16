@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sabor da Esquina - Salgados</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Banner com imagem de fundo e navbar transparente -->
+  <header class="banner">
+    <nav class="navbar">
+      <div class="logo">Sabor da Esquina</div>
+      <ul class="nav-links">
+        <li><a href="#salgados">Ver Cardápio</a></li>
+        <li><a href="#pedido">Realizar Pedido</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+      </ul>
+    </nav>
+    <div class="banner-content">
+      <h1>Bem-vindo ao Sabor da Esquina</h1>
+      <p>Os melhores salgados para qualquer ocasião!</p>
+      <a href="#salgados" class="btn">Ver Cardápio</a>
+    </div>
+  </header>
+
+  <section class="combo-section">
+    <h2>Combos Especiais</h2>
+    <div class="carousel" id="combo-carousel">
+      <button class="carousel-btn left" onclick="scrollCarousel('combo-carousel', -1)">&#10094;</button>
+      <div class="carousel-track">
+        <!-- 9 combos fictícios -->
+        <div class="carousel-item">Combo 1<br>100 coxinhas</div>
+        <div class="carousel-item">Combo 2<br>50 kibes + 50 empadas</div>
+        <div class="carousel-item">Combo 3<br>80 risoles + 20 croquetes</div>
+        <div class="carousel-item">Combo 4<br>60 bolinhos + 40 empadas</div>
+        <div class="carousel-item">Combo 5<br>100 salgados variados</div>
+        <div class="carousel-item">Combo 6<br>30 risoles + 70 coxinhas</div>
+        <div class="carousel-item">Combo 7<br>Combo festa (120 salgados)</div>
+        <div class="carousel-item">Combo 8<br>Combo kids (80 salgados)</div>
+        <div class="carousel-item">Combo 9<br>Combo mini (60 salgados)</div>
+      </div>
+      <button class="carousel-btn right" onclick="scrollCarousel('combo-carousel', 1)">&#10095;</button>
+    </div>
+  </section>
+  
+  <!-- Promoções da Semana -->
+  <section class="promo-section">
+    <h2>Promoções da Semana</h2>
+    <div class="carousel" id="promo-carousel">
+      <button class="carousel-btn left" onclick="scrollCarousel('promo-carousel', -1)">&#10094;</button>
+      <div class="carousel-track">
+        <div class="carousel-item">Coxinha 30% OFF</div>
+        <div class="carousel-item">Combo Família R$20 off</div>
+        <div class="carousel-item">Kibe grátis a cada 10</div>
+        <div class="carousel-item">Risoles + Refri Promo</div>
+        <div class="carousel-item">Empada 3 por R$10</div>
+        <div class="carousel-item">Frete grátis acima R$50</div>
+        <div class="carousel-item">Croquete 2x1</div>
+        <div class="carousel-item">Mini Combo surpresa</div>
+        <div class="carousel-item">Salgado do dia R$2</div>
+      </div>
+      <button class="carousel-btn right" onclick="scrollCarousel('promo-carousel', 1)">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Cardápio -->
+  <section id="salgados" class="salgados-section">
+    <h2>Cardápio</h2>
+    <div class="card-container">
+        <a href="coxinha.html" class="card-link">
+            <div class="card">
+              <img src="https://via.placeholder.com/200x150" alt="Coxinha">
+              <h3>Coxinha</h3>
+              <p>Crocante por fora, cremosa por dentro.</p>
+            </div>
+          </a>
+      <div class="card"><img src="https://via.placeholder.com/300x200" alt="Kibe"><h3>Kibe</h3><p>Tradicional kibe recheado com muito sabor.</p></div>
+      <div class="card"><img src="https://via.placeholder.com/300x200" alt="Empada"><h3>Empada</h3><p>Empada cremosa com massa amanteigada.</p></div>
+      <div class="card"><img src="https://via.placeholder.com/300x200" alt="Risoles"><h3>Risoles</h3><p>Risoles crocante recheado com queijo e presunto.</p></div>
+      <div class="card"><img src="https://via.placeholder.com/300x200" alt="Bolinho de Calabresa"><h3>Bolinho de Calabresa</h3><p>Salgado recheado com calabresa temperada e queijo.</p></div>
+      <div class="card"><img src="https://via.placeholder.com/300x200" alt="Croquete"><h3>Croquete</h3><p>Croquete macio e saboroso de carne desfiada.</p></div>
+    </div>
+  </section>
+
+  <!-- Sobre nós -->
+  <section id="sobre" class="sobre-section">
+    <h2>Sobre Nós</h2>
+    <p>Trabalhamos com ingredientes frescos e de alta qualidade para garantir o melhor sabor em cada mordida. Nossa missão é levar alegria e sabor a cada cliente, com salgados feitos com carinho e tradição.</p>
+  </section>
+
+  <!-- Contato -->
+  <section id="pedido" class="contato-section">
+    <h2>Peça Agora</h2>
+    <p>Entre em contato pelo WhatsApp ou Instagram!</p>
+    <a href="#" class="btn">Fazer Pedido</a>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <p>&copy; 2025 Sabor da Esquina. Todos os direitos reservados.</p>
+  </footer>
+  <div id="carrinho" class="carrinho-flutuante">🛒 Ver Carrinho</div>
+  <script src="js/script.js"></script>
+</body>
+</html>
